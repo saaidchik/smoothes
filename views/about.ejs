@@ -1,0 +1,355 @@
+<!-- aboutUs.ejs -->
+<%- include('partials/header'); -%>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+</head>
+<style>
+    * {
+  font-family: Nunito, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+body{
+    overflow-x: hidden;
+    background-color: #dfdada;
+    /* background-image: url(https://www.backgroundsy.com/file/large/light-colorful-background.jpg); */
+}
+
+.text-blk {
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  line-height: 20px;
+  color: white;
+  font-size: 14px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 40px;
+  margin-left: 0px;
+}
+
+.responsive-container-block {
+  min-height: 75px;
+  height: fit-content;
+  width: 100vw;
+  overflow: hidden;
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  justify-content: flex-start;
+}
+
+.responsive-container-block.bigContainer {
+    overflow: hidden;
+  background-image: initial;
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat-x: initial;
+  background-repeat-y: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: rgb(173, 31, 31);
+  background-color: #dfdada;
+  /* background-image: url(https://media.istockphoto.com/id/519527618/photo/colorful-candies-jelly-and-marmalade.jpg?s=2048x2048&w=is&k=20&c=Pv_IRuwxQap7YisfozIe2gB1R-FTH--DA1Ofc8iWpF4=); */
+
+  margin: 0 0 0 0;
+}
+
+.responsive-container-block.Container {
+  max-width: 1320px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+  /* margin-right: auto; */
+  /* margin-bottom: 80px; */
+  margin-left: auto;
+  padding-top: 10px;
+  padding-right: 0px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  /* background-image: url(https://media.istockphoto.com/id/519527618/photo/colorful-candies-jelly-and-marmalade.jpg?s=2048x2048&w=is&k=20&c=Pv_IRuwxQap7YisfozIe2gB1R-FTH--DA1Ofc8iWpF4=); */
+}
+
+.responsive-container-block.leftSide {
+  width: auto;
+  align-items: flex-start;
+  padding-top: 10px;
+  padding-right: 0px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  flex-direction: column;
+  position: static;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  /* max-width: 300px; */
+}
+
+.text-blk.heading {
+  font-size: 40px;
+  line-height: 64px;
+  font-weight: 900;
+  color: green;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 40px;
+  margin-left: 0px;
+}
+
+.text-blk.btn {
+  color: rgb(0, 178, 235);
+  background-image: initial;
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat-x: initial;
+  background-repeat-y: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(160, 121, 0, 0.2) 0px 12px 35px;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  padding-top: 20px;
+  padding-right: 50px;
+  padding-bottom: 20px;
+  padding-left: 50px;
+  cursor: pointer;
+}
+
+.responsive-container-block.rightSide {
+  width: 675px;
+  position: relative;
+  /* padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px; */
+  display: flex;
+  height: 700px;
+  min-height: auto;
+  margin-top: 50px;
+}
+
+.number1img {
+  margin-top: 45%;
+  margin-right: 80%;
+  margin-bottom: 29%;
+  margin-left: 0px;
+  height: 35%;
+  width: 35%;
+  position: absolute;
+}
+
+.number2img {
+  /* margin-top: 19%;
+  margin-right: 42%;
+  margin-bottom: 42%;
+  margin-left: 23%; */
+  /* width: 35%; */
+  height: 39%;
+  position: absolute;
+}
+
+.number3img {
+  width: 30%;
+  height: 120px;
+  position: absolute;
+  margin-top: 62%;
+  /* margin-right: 64%; */
+  margin-bottom: 30%;
+  margin-left: 40%;
+}
+
+.number4vid {
+  width: 34%;
+  height: 33%;
+  position: absolute;
+  margin-top: 62%;
+  margin-right: 27%;
+  margin-bottom: 0px;
+  margin-left: 39%;
+}
+
+.number5img {
+  position: absolute;
+  width: 24%;
+  height: 18%;
+  margin-top: 42%;
+  /* margin-right: 27%; */
+  margin-bottom: 41%;
+  margin-left: 45%;
+}
+
+.number6img {
+  position: absolute;
+  margin-top: 0px;
+  margin-right: 3%;
+  margin-bottom: 67%;
+  margin-left: 62%;
+  width: 35%;
+  height: 33%;
+}
+
+.number7img {
+  position: absolute;
+  width: 25%;
+  margin-top: 40%;
+  margin-right: 0px;
+  margin-bottom: 18%;
+  margin-left: 75%;
+  height: 38%;
+}
+
+.text-blk.subHeading {
+  font-size: 18px;
+  line-height: 25px;
+  color: grey;
+}
+
+@media (max-width: 1024px) {
+  .responsive-container-block.Container {
+    flex-direction: column-reverse;
+  }
+
+  .text-blk.heading {
+    text-align: center;
+    max-width: 370px;
+  }
+
+  .text-blk.subHeading {
+    text-align: center;
+  }
+
+  .responsive-container-block.leftSide {
+    align-items: center;
+    max-width: 480px;
+  }
+
+  .responsive-container-block.rightSide {
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 100px;
+    margin-left: auto;
+  }
+
+  .responsive-container-block.rightSide {
+    margin: 0 auto 70px auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .responsive-container-block.rightSide {
+    width: 450px;
+    height: 450px;
+  }
+
+  .responsive-container-block.leftSide {
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 500px) {
+  .number1img {
+    display: none;
+  }
+
+  .number2img {
+    display: none;
+  }
+
+  .number3img {
+    display: none;
+  }
+
+  .number5img {
+    display: none;
+  }
+
+  .number6img {
+    display: none;
+  }
+
+  .number7img {
+    display: none;
+  }
+
+  .responsive-container-block.rightSide {
+    width: 100%;
+    height: 250px;
+    margin-top: 50px;
+    margin-right: 0px;
+    margin-bottom: 100px;
+    margin-left: 0px;
+  }
+
+  .number4vid {
+    position: static;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    width: 100%;
+    height: 100%;
+  }
+
+  .text-blk.heading {
+    font-size: 25px;
+    line-height: 40px;
+    max-width: 370px;
+    width: auto;
+    /* color: green; */
+  }
+
+  .text-blk.subHeading {
+    font-size: 14px;
+    line-height: 25px;
+  }
+
+  .responsive-container-block.leftSide {
+    width: 100%;
+  }
+}
+</style>
+<body>
+    <div class="responsive-container-block bigContainer">
+        <div class="responsive-container-block Container">
+          <div class="responsive-container-block leftSide">
+            <p class="text-blk heading">
+              Meet Our Creative Team
+            </p>
+            <p class="text-blk subHeading">
+                A smoothie is a beverage made by puréeing ingredients in a blender. A smoothie commonly has a liquid base, such as fruit juice or milk, yogurt or ice cream. Other ingredients may be added, including fruits, vegetables, non-dairy milk, crushed ice, whey powder or nutritional supplements.
+            </p>
+          </div>
+          <div class="responsive-container-block rightSide">
+            <img class="number1img" src="https://thumbs.dreamstime.com/b/heart-shape-various-vegetables-fruits-healthy-food-concept-isolated-white-background-140287808.jpg">
+            <img class="number2img" src="https://img.taste.com.au/gVht4kN-/taste/2020/01/jan20_easy-berry-smoothie-taste-156331-1.jpg">
+            <img class="number3img" src="https://images.immediate.co.uk/production/volatile/sites/30/2022/12/Smoothie-bowl-16df176.jpg?resize=768,574">
+            <img class="number5img" src="https://hips.hearstapps.com/hmg-prod/images/summer-smoothiess-1608647526.jpg?crop=1.00xw:0.992xh;0,0&resize=1200:*">
+            <!-- <iframe allowfullscreen="allowfullscreen" class="number4vid" poster="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/b242.png" src="https://youtu.be/2CzMagqdjko"> -->
+              <!-- </iframe> -->
+              <img class="number7img" src="https://assets.bonappetit.com/photos/5b0572772d4ccc29ce72d721/1:1/w_2700,h_2700,c_limit/blueberry-lime-and-cashew-smoothies.jpg">
+              <img class="number6img" src="https://www.skinnytaste.com/wp-content/uploads/2023/04/Green-Smoothie-Bowl-7.jpg">
+            </div>
+            <iframe  width="510" height="450" src="https://www.youtube.com/embed/94AV_epDjb4?si=9KCcBsXTCQA34e9d" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      <!-- </div> -->
+</body>
+</html>

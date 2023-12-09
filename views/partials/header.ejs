@@ -1,0 +1,32 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  </head>
+  <body>
+    <nav >
+      <h1>
+        <a href="/", style="font-size: 44px; color: green; font-style: sans-serif;">Smoothies & Shakes</a>
+      </h1>
+      <ul>
+        <% if (user) { %>
+        <li style="color: white;font-weight: bold;">Welcome, <%= user.email %></li>
+        <li><a href="/logout", style="color: green;border-radius: 36px;
+          background: white;font-weight: bolder;">Log out</a></li>
+          <li><a href="/about", style="color: white;border-radius: 36px;
+            background: green;font-weight: bolder;">About</a></li>
+            <li><a href="/order", style="color: white;border-radius: 36px;
+              background: green;font-weight: bolder;">Order</a></li>
+              <li><a href="/news", style="color: white;border-radius: 36px;
+                background: green;font-weight: bolder;">news</a></li>
+        <% } else { %>
+        <li><a href="/login" style="font-size: 24px; color: green;">Log in</a></li>
+        <li><a href="/signup" class="btn">Sign up</a></li>
+        <% } %>
+      </ul>
+    </nav>
+  </body>
+</html>

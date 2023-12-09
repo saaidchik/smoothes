@@ -1,0 +1,1 @@
+export const dbURI = "mongodb+srv://test:test@cluster0.eqd3par.mongodb.net/auth?retryWrites=true&w=majority"

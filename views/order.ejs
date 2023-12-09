@@ -1,0 +1,131 @@
+<!-- order.ejs -->
+<%- include('partials/header'); -%>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Order Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #efecec;
+      /* background-image: url(https://media.istockphoto.com/id/1458426042/photo/group-of-healthy-eating-with-copy-space-on-white-background.jpg?s=2048x2048&w=is&k=20&c=VgEKuW3FxeR8weEgG46f1_Y3JL5_EDIP4hqLd3oZVQk=); */
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .food-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .food-item img {
+      max-width: 100px;
+      max-height: 100px;
+      margin-right: 20px;
+    }
+
+    .food-details {
+      flex-grow: 1;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    p {
+      color: #666;
+    }
+
+    .price {
+      color: green;
+      font-weight: bold;
+    }
+
+    .order-btn {
+      background-color: green;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.3s;
+    }
+
+    .order-btn:hover {
+      background-color: #cdd4cd;
+      color: green;
+      border: 1px solid green;
+      transition: 0.2s;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- <header style="background-color: #cdd4cd;">
+    <h1 style="color: green;">Food Order Page</h1>
+  </header> -->
+
+  <section style="border-radius: 10px; margin-top: 50px;">
+    <div class="food-item">
+      <img src="https://assets.bonappetit.com/photos/63b5fe187015aa59a8e880ac/1:1/w_3226,h_3226,c_limit/010323-its-greek-yogurt-taste-test-01.jpg"; style="border-radius: 10px;" alt="Burger"> 
+      <!-- rasm qoyib ochir -->
+      <div class="food-details">
+          <h2>Greek Yogurt</h2>
+          <p>Greek yogurt is made from cow's milk that is strained to remove the whey .</p>
+          <p class="price">$5.99</p>
+        </div>
+        <button class="order-btn">Order Now</button>
+    </div>
+    
+    <div class="food-item">
+        <img src="https://www.wellplated.com/wp-content/uploads/2019/10/Low-Calorie-Strawberry-Blueberry-Smoothie-recipe.jpg"; style="border-radius: 10px;" alt="Pizza">
+        <!-- rasm qoyib ochir -->
+      <div class="food-details">
+        <h2>Morning smoothie</h2>
+        <p>Healthy Fruit Smoothies · Peanut Butter Banana Smoothie · Strawberry Smoothie · </p>
+        <p class="price">$8.99</p>
+      </div>
+      <button class="order-btn">Order Now</button>
+    </div>
+
+    <!-- Add more food items as needed -->
+  </section>
+
+  <footer style="background-color: #cdd4cd";>
+    <p>&copy; 2023 Food Order Page</p>
+  </footer>
+
+</body>
+</html>
+
